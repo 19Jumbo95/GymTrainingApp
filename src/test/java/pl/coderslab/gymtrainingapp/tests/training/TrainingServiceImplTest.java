@@ -29,11 +29,14 @@ public class TrainingServiceImplTest {
 
         Exercise exercise = new Exercise(1L, "Bench press", "chest", 6, 3);
         Exercise exercise1 = new Exercise(2L, "Lat pulldown", "back", 6, 3);
-        TrainingDTO trainingDTO = new TrainingDTO(null, "Generated training", List.of(exercise, exercise1), null);
-        Mockito.when(exerciseRepository.findAllByBodyPart("chest")).thenReturn(List.of(exercise));
+        Exercise exercise2 = new Exercise(3L, "Dumbbell press", "chest", 6, 3);
+        TrainingDTO trainingDTO = new TrainingDTO(1L, "Generated training", List.of(exercise, exercise1, exercise2), null);
+        Mockito.when(exerciseRepository.findAllByBodyPart("chest")).thenReturn(List.of(exercise, exercise2));
         Mockito.when(exerciseRepository.findAllByBodyPart("back")).thenReturn(List.of(exercise1));
+        Mockito.when(trainingRepository.save(Mockito.any(Training.class)))
+                .thenReturn(new Training(1L, "Generated training", List.of(exercise, exercise1, exercise2), null));
 
-        TrainingDTO actual = trainingService.generateTraining(30, new String[]{"chest", "back"});
+        TrainingDTO actual = trainingService.generateTraining(45, new String[]{"chest", "back"});
 
         assertEquals(actual, trainingDTO);
     }

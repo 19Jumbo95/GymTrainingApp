@@ -28,4 +28,4 @@ GET localhost:8080/training/findByName/pull123
 PUT localhost:8080/training/add-exercise/lat pulldown/pull
 
 ### Generate training
-POST localhost:8080/training/generate-training?amountOfTime=60&bodyParts=back&bodyParts=chest
+POST localhost:8080/training/generate-training?amountOfTime=45&bodyParts=back&bodyParts=chest

@@ -61,6 +61,7 @@ public class TrainingServiceImpl implements TrainingService {
         List<Exercise> exerciseList = new ArrayList<>();
         int amountOfExercises = amountOfTime / 15;
         int amountOfExercisesOnOneBodyPart = amountOfExercises / bodyParts.length;
+        int modulo = amountOfExercises % bodyParts.length;
         for (String bodyPart : bodyParts) {
             for (int i = 0; i < amountOfExercisesOnOneBodyPart; i++) {
                 List<Exercise> exerciseRepositoryAllByBodyPart = exerciseRepository.findAllByBodyPart(bodyPart);
@@ -72,6 +73,14 @@ public class TrainingServiceImpl implements TrainingService {
                 randomNumberChecker = randomNumber;
 
             }
+        }
+        for (int i = 0; i < modulo; i++) {
+            List<Exercise> exerciseRepositoryAllByBodyPart = exerciseRepository.findAllByBodyPart(bodyParts[i]);
+            int randomNumber = random.nextInt(exerciseRepositoryAllByBodyPart.size());
+            while (exerciseList.contains(exerciseRepositoryAllByBodyPart.get(randomNumber))) {
+                randomNumber = random.nextInt(exerciseRepositoryAllByBodyPart.size());
+            }
+            exerciseList.add(exerciseRepositoryAllByBodyPart.get(randomNumber));
         }
         TrainingDTO trainingDTO = TrainingDTO.builder()
                 .name("Generated training")
