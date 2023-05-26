@@ -1,0 +1,26 @@
+### Create exercise
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "bench press",
+  "bodyPart": "chest",
+  "reps": 5,
+  "sets": 3
+}
+### Create second exercise
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "bent over row",
+  "bodyPart": "back",
+  "reps": 5,
+  "sets": 3
+}
+
+### Find by body part
+GET http://localhost:8080/exercise/findAllByBodyPart/chest
+
+### Find by name
+GET http://localhost:8080/exercise/findByName/lat pulldown

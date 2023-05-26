@@ -1,0 +1,14 @@
+### Create user
+POST http://localhost:8080/user-params/create
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "weight": 105
+}
+
+### Find all by user
+GET localhost:8080/user-params/findAllById/2
+
+### Find by date
+GET localhost:8080/user-params/findByDate/2023-05-25

@@ -1,0 +1,31 @@
+### Create training
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "FBW 1H",
+  "exerciseList": [
+  {
+    "id": 1,
+    "name": "bent over row",
+    "bodyPart": "back",
+    "reps": 5,
+    "sets": 3
+  }
+  ]
+}
+
+### sample
+GET localhost:8080/training/sample
+
+### find all
+GET localhost:8080/training/findAll
+
+### Find by name
+GET localhost:8080/training/findByName/pull123
+
+### Add Exercise
+PUT localhost:8080/training/add-exercise/lat pulldown/pull
+
+### Generate training
+POST localhost:8080/training/generate-training?amountOfTime=60&bodyParts=back&bodyParts=chest
