@@ -16,11 +16,6 @@ public class TrainingController {
 
     private final TrainingService trainingService;
 
-    @GetMapping("/sample")
-    public TrainingDTO getSample() {
-        return new TrainingDTO(1L, "pull", List.of(new Exercise(1L, "lat pulldown", "back", 1, 1)), LocalDateTime.now());
-    }
-
     @GetMapping("/findAll")
     public List<TrainingDTO> findAll() {return trainingService.findAll();}
 

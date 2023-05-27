@@ -1,24 +1,4 @@
-### Create training
-POST http://localhost:8080/training/create
-Content-Type: application/json
-
-{
-  "name": "FBW 1H",
-  "exerciseList": [
-  {
-    "id": 1,
-    "name": "bent over row",
-    "bodyPart": "back",
-    "reps": 5,
-    "sets": 3
-  }
-  ]
-}
-
-### sample
-GET localhost:8080/training/sample
-
-### find all
+### Find all
 GET localhost:8080/training/findAll
 
 ### Find by name

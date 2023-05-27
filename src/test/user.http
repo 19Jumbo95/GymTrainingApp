@@ -1,20 +1,5 @@
-### Create user
-POST http://localhost:8080/user/create
-Content-Type: application/json
-
-{
-  "name": "Maciek"
-}
-### Create user 2
-POST http://localhost:8080/user/create
-Content-Type: application/json
-
-{
-"name": "Jan"
-}
-
 ### Add training
 PUT localhost:8080/user/add-training?trainingName=FBW 1H&userId=1
 
 ### Generate training plan
-PUT localhost:8080/user/generate-training?amountOfDays=1&amountOfTime=1&userId=1
+PUT localhost:8080/user/generate-training?amountOfDays=4&amountOfTime=2&userId=1

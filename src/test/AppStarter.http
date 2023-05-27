@@ -1,0 +1,222 @@
+### Create exercise
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "bench press 1",
+  "bodyPart": "chest",
+  "reps": 100,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "lat pulldown",
+  "bodyPart": "back",
+  "reps": 8,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "dumbbell bench press",
+  "bodyPart": "chest",
+  "reps": 8,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "incline bench press",
+  "bodyPart": "chest",
+  "reps": 8,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "chin up",
+  "bodyPart": "back",
+  "reps": 8,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "bent over row",
+  "bodyPart": "back",
+  "reps": 8,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "squat",
+  "bodyPart": "legs",
+  "reps": 5,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "deadlift",
+  "bodyPart": "legs",
+  "reps": 5,
+  "sets": 3
+}
+###
+POST http://localhost:8080/exercise/create
+Content-Type: application/json
+
+{
+  "name": "bulgarian split squat",
+  "bodyPart": "legs",
+  "reps": 10,
+  "sets": 3
+}
+### Create training
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "FBW 1H",
+  "exerciseList": [
+    {
+      "id": 1,
+      "name": "bench press",
+      "bodyPart": "chest",
+      "reps": 5,
+      "sets": 3
+    },
+    {
+      "id": 2,
+      "name": "lat pulldown",
+      "bodyPart": "back",
+      "reps": 5,
+      "sets": 3
+    },
+    {
+      "id": 7,
+      "name": "squat",
+      "bodyPart": "legs",
+      "reps": 5,
+      "sets": 3
+    },
+    {
+      "id": 3,
+      "name": "dumbbell bench press",
+      "bodyPart": "chest",
+      "reps": 8,
+      "sets": 3
+    }
+  ]
+}
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "FBW 2H"
+  }
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "FBW A"
+}
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "FBW B"
+}
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "PUSH"
+}
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "PULL"
+}
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "UPPER"
+}
+###
+POST http://localhost:8080/training/create
+Content-Type: application/json
+
+{
+  "name": "LOWER"
+}
+### Create user
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "name": "Maciek"
+}
+### Create user 2
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "name": "Jan"
+}
+### Create userParam
+POST http://localhost:8080/user-params/create
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "weight": 105
+}
+###
+POST http://localhost:8080/user-params/create
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "weight": 100
+}
+###
+POST http://localhost:8080/user-params/create
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "weight": 80
+}
+###
+POST http://localhost:8080/user-params/create
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "weight": 78
+}
