@@ -16,7 +16,6 @@ import pl.coderslab.gymtrainingapp.training.TrainingController;
 import pl.coderslab.gymtrainingapp.training.TrainingDTO;
 import pl.coderslab.gymtrainingapp.training.TrainingService;
 
-import java.awt.*;
 import java.util.List;
 
 @WebMvcTest(TrainingController.class)
